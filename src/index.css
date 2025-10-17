@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: "Modern Negra";
-    src: url("/fonts/Modern Negra Demo.ttf") format("truetype");
+    src: url("../public/fonts/Modern-Negra-Demo.ttf") format("truetype");
 }
 
 @theme {
@@ -53,7 +53,7 @@ body {
 }
 
 @utility masked-img {
-    mask-image: url("/images/mask-img.png");
+    mask-image: url("../public/images/mask-img.png");
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: 50%;
@@ -68,7 +68,7 @@ body {
         @apply fixed z-50 w-full;
 
         div {
-            @apply flex md:flex-row flex-col md:justify-between items-center gap-5 py-5 lg:px-0 px-5 container mx-auto;
+            @apply flex md:flex-row flex-col md:justify-between items-center gap-5 py-5 px-5 lg:px-10 xl:px-16 2xl:px-24 max-w-screen-2xl mx-auto;
         }
 
         p {
@@ -96,7 +96,7 @@ body {
         }
 
         .left-leaf {
-            @apply absolute left-0 md:top-20 xl:top-36 2xl:top-52 md:bottom-auto -bottom-20 md:w-fit w-1/3;
+            @apply absolute left-0 md:top-10 xl:top-20 2xl:top-30 md:bottom-auto -bottom-20 md:w-fit w-1/3;
         }
 
         .right-leaf {
@@ -104,7 +104,7 @@ body {
         }
 
         .body {
-            @apply container mx-auto absolute left-1/2 -translate-x-1/2 lg:bottom-20 top-auto md:top-[30vh] flex justify-between items-end px-5;
+            @apply container mx-auto absolute left-1/2 -translate-x-1/2 lg:bottom-20 top-auto md:top-[30vh] flex justify-between items-end px-10;
 
             .content {
                 @apply flex lg:flex-row flex-col w-full gap-10 justify-between items-center lg:items-end mx-auto;
