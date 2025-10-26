@@ -1,16 +1,33 @@
-# React + Vite
+# Onyx — Cocktail Menu (React + Vite + GSAP)
+A one-page, animated cocktail menu built with React (Vite) and GSAP.
+It showcases a bar/restaurant landing experience: a hero with video-scrub, parallax leaves, a menu slider, and a clean contact section.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Highlights
+- Hero with text reveal (SplitText) and scroll-scrubbed video
+- Parallax ornaments (leaves) tied to scroll
+- Cocktails & Mocktails lists driven by simple constants
+- Tab/slider section for highlighted drinks
+- Accessible markup (semantic sections, alt/aria)
+- Responsive layout (mobile → desktop)
+- Lightweight build via Vite
 
-Currently, two official plugins are available:
+## Tech Stack
+- React + Vite — fast dev server, instant HMR, tiny production builds.
+- GSAP (gsap, ScrollTrigger, SplitText) — timeline-based, smooth, and precise animations:
+    - SplitText reveals hero and section titles by words/chars/lines.
+    - ScrollTrigger scrubs the hero video and moves parallax leaves.
+- Tailwind (via import "tailwindcss") — utility-first styling, plus custom utilities and theme tokens defined in src/index.css.
+- react-responsive — media query hook for mobile vs. desktop animation tweaks.
+- Static assets from /public — easy to reference (/images/..., /videos/...).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How Animations Work
+- Hero.jsx
+    - SplitText splits .title / .subtitle → GSAP animates with stagger
+    - ScrollTrigger scrubs the video from currentTime: 0 → duration
+    - Leaves move with a small parallax on hero scroll
 
-## React Compiler
+- Cocktails.jsx / About.jsx / Contact.jsx
+    - Word-by-word title reveals; light parallax on decorative elements
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Menu.jsx
+    - Tabs change the active cocktail; a GSAP sequence animates image + details on change
