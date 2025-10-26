@@ -1,4 +1,6 @@
 # Onyx — Cocktail Menu (React + Vite + GSAP)
+You can explore the live demo here: [cocktail-menu-project-gsap.vercel.app](https://cocktail-menu-project-gsap.vercel.app/)
+
 A one-page, animated cocktail menu built with React (Vite) and GSAP.
 It showcases a bar/restaurant landing experience: a hero with video-scrub, parallax leaves, a menu slider, and a clean contact section.
 
